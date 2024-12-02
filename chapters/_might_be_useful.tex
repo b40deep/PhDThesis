@@ -1,0 +1,47 @@
+
+\subsubsection{Story generation: }
+multilingual generation is possible as shown by \cite{nambi2023breakinglanguagebarriersleap} and may be useful in the future since many places are multilingual (besides English). 
+Which models to test with and why. GPT4 if I get the credits. Others would be whatever is popular at the moment (Look into Llamma, Mixtral, Dolphin, ) (find some LLM papers and see what they chose and why)
+\colorbox{yellow}{M5 dataset} \cite{schneider2024m}  suggest Llama3.
+\colorbox{yellow}{IrokoBench} \cite{adelani2024irokobenchnewbenchmarkafrican} use multilingual T5 pre-trained on 101 languages (mT0 and Aya-101) models. Is that public? They also use GPT and Claude OPUS (both are paid services)
+\colorbox{yellow}{Big group} \cite{alabi-etal-2022-adapting} did multilingual finetuning on Pre-trained Lang Models to accomodate African languages. 
+\colorbox{yellow}{Beyond Metrics} \cite{ochieng2024beyond} suggest Llama-2-70b-chat, Mistral-7B-Instruct-v0.2, Mixtral-8x7B-Instruct-v0.1, Gemma-7b-it, with reasons why.
+\colorbox{yellow}{Kim and friends} \cite{Kim2024Context-Aware-Gen} have info on NLP methods for sentence reduction and abstraction that can help extract cultural elements from the input.
+
+\subsubsection{Image generation:}
+\begin{enumerate}
+    \item Which models to test with and why. One idea is one of each type (listed above). Another is to test the popular / state-of-the-art ones (Autoreg like Parti \cite{yu2022scalingautoregressivemodelscontentrich}, GANs like [can't find], VAEs \cite{kingma2013auto} like ruDALLE, Diffusion models like IMAGEN, DALLE2, GLIDE, SD, and Mamba the 'only' SSM). 
+    \item (ignore) Parti \& Imagen not available, DALLE behind paywall
+    \item (ignore) DALLE3 similar model from \href{https://huggingface.co/ehristoforu/dalle-3-xl-v2}{here}  has custom Lora for ComfyUI \href{https://github.com/jitcoder/lora-info}{here} , tutorial \href{https://www.youtube.com/watch?v=uU4jUV4rm_A}{here} 
+    \item (ignore) Dalle-mini \href{https://huggingface.co/dalle-mini/dalle-mini}{here}  and Dalle-mega \href{https://huggingface.co/dalle-mini/dalle-mega}{here} 
+    \item (trouble making it work) ruDalle update \href{https://huggingface.co/ai-forever/Kandinsky3.1}{here} 
+    \item (ignore) Glide model (precursor to Dalle2) need to test - currently on \href{https://github.com/openai/glide-text2im}{Colab} 
+    \item (trouble making it work) Mamba might only be for LLM for \href{https://github.com/state-spaces/mamba}{now}  and models \href{https://huggingface.co/state-spaces}{here} 
+    \item (done, looks good too) try out Fooocus \href{https://github.com/lllyasviel/Fooocus}{local install}  tut \href{https://www.youtube.com/watch?v=aiZWEbUjAGw}{here} 
+    \item (ignore) SSD 1B smaller than SDXL but equal performance \href{https://huggingface.co/segmind/SSD-1B}{here} tut \href{https://www.youtube.com/watch?v=0XpKQrBrZTs}{here} 
+    \item In case GAN is tested, consider layout guidance to improve generation \cite{zakraoui2021improving}, architectures, variants, comparisions, and applications from \cite{creswell2018generative}. Mote is available in draft doc but this should be enough.
+    \item \colorbox{yellow}{Kim and friends} \cite{Kim2024Context-Aware-Gen} have a new scheme for maintaining context between Image generation prompts. useful to generate consistent characters or scenes in batches of related images e.g., story. Also mentions other papers that have tried to solve the complex image generation problem.
+\end{enumerate}
+
+\subsubsection{Prompting and RAG}
+\begin{enumerate}
+    \item \cite{zhou2022learning}  propose \textit{Context Optimization (CoOp)} that's better than prompt engineering. Used in Image recognition rather than generation. Might be useful in the pipeline in place of RAG typical generators that are frequently used in RAG: transformer model, LSTM, diffusion model, and GAN.
+    \item \cite{zhao2024retrieval} highlights retrieval methods (sparse and dense). Also has typical generators that are frequently used in RAG: transformer model, LSTM, diffusion model, and GAN.
+
+\end{enumerate}
+
+\subsubsection{Similar work:}
+\begin{enumerate}
+    \item A Pipeline for Story Visualization from Natural Language by \cite{storyviz1}. Full pipeline is present, similar to my scribbles. Also had trouble with GAN performance. I need to keep an eye on scene-building T2I (a big challenge) since the project users might want actions and locations to make more useful stories \& images.
+\end{enumerate}
+
+\subsubsection{How to measure success of the project:}
+\begin{enumerate}
+    \item Might pick some ideas from IrokoBench \cite{adelani2024irokobenchnewbenchmarkafrican}
+    \item Focus groups for human evaluation of the stories and images - \cite{Qadri}
+    \item Dataset option - COCO by Microsoft - \cite{zakraoui2021improving}
+    \item Dataset options - MNIST, StreetV View House Numbers, CIFAR, CUB-200-2011, The Oxford-102 dataset, and many other options - \cite{zhou2021survey}
+    \item Evaluation metrics options - Inception Score (IS), The FCN-scores, Frechet Inception Distance (FID), Multi-Scale Structural Similarity (MS-SSIM), Visual-semantic similarity - \cite{zhou2021survey}
+    \item \colorbox{yellow}{M5 dataset} \cite{schneider2024m} has good multilingual datasets for testing, and creates their own.
+\end{enumerate}
+
