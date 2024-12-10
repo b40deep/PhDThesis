@@ -356,6 +356,9 @@ end of discovered biases.
 	- to explore the gap between AI-generated and human-written stories in order to enhance the quality of generated content. 
 	- to develop methods for distinguishing between AI-generated and human-written stories, with the aim of preventing potential harm, such as the spread of fake news stories.
 
+Some of the many ways to measure user experience in collaborative writing:  
+![alt text](image-12.png)
+
 **summary** 
 - Although LLM-based evaluations achieve much better results than traditional methods, there is still a long way to go in realizing reliable and robust evaluation.
 - UniEval and COMET22 trained on human eval, show even stronger results than some reference-based LLM metrics.
