@@ -27,7 +27,8 @@ The aim of the study is to capture the changes and feedback made to the system. 
 - *(new)* after the workflow, the changes and feedback from the user are analysed.
 
 The diagram shows the flow of the proposed system:
-![alt text](image-1.png)
+<!-- ![alt text](image-1.png) -->
+![alt text](https://i.imgur.com/kkgZ8cC.png)
 
 The experiment details for input (patient and prompt details) and output (output and evaluation details) are presented below:
 ### patient

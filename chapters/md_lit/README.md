@@ -183,8 +183,8 @@ survey of more than 90% of papers that aim to study culture in LLMs.
 - using keywords
 - using outlines
 - incorporating external knowledge
-- generating in specified styles suing leading context
-- generating stories iwth desired titles and protagonists' emotional arcs
+- generating in specified styles using leading context
+- generating stories with desired titles and protagonists' emotional arcs
 - generating stories considering the changes in the psychological state, while they just control the emotion lines instead of the detailed contents.
 
 *previous **controllable** story gen ideas:*
@@ -202,6 +202,7 @@ survey of more than 90% of papers that aim to study culture in LLMs.
 - built on top of BART (bidirectional encoder) rather than GPT-2 (transformer, fully auto-regressive)
 - they create a special token *Chae* inspired by the practice of leveraging special tokens for controllable generation.
 - *Chae* the token is different from **CHAE** the model
+
 ![alt text](image-3.png)
   
 **results**  
@@ -267,7 +268,6 @@ testing with:
 under-explored areas:
 - personalized evaluation (particularly in terms of subjective aspects like empathy and interestingness), 
 - long story evaluation
-- 
 
 **solution**  
 Our survey provides a comprehensive review of story evaluation. Outline:
@@ -302,7 +302,7 @@ Common aspects used for evaluating story quality and their definitions:
 	- Toxicity. rude, unreasonable, or disrespectful components.
 	- Naturalness/Human-like. is the story likely to be written by a human?
 	- Non-Hallucination. does story contain unreasonable information that cannot be supported by the source input?
-	- 
+	
 ![Common aspects used for evaluating story quality and their definitions.](image-5.png)
 
 Taxonomy of evalutation metrics:
@@ -391,16 +391,236 @@ Story evaluation benchmark datasets:
 
 **models**
 
+There are several since it's a scoping paper.
+
+## M5 -- A Diverse Benchmark to Assess the Performance of Large Multimodal Models Across Multilingual and Multicultural Vision-Language Tasks
+**year, subject, code**  
+2024, Benchmark and testing Datasets, 
+
+**background**  
+- We have benchmarks for LLMs.
+- Proprietary models:
+	- GPT-4 (Achiam et al.,2023), 
+	- Claude (Bai et al., 2022), 
+	- Gemini (Anilet al., 2023)
+	- (LMM) GPT 4V (OpenAI, 2023), 
+	- (LMM) Gemini Pro V (Anilet al., 2023),
+- open-source variants 
+	- Llama (Touvron et al., 2023),
+	- Phi (Gunasekar et al., 2023; Abdin et al., 2024), 
+	- Mistral (Jiang et al., 2023)
+	- (LMM) LLaVA (Liu et al., 2023a,b)
+- how LMMs work:
+	- a pretrained generative LLM as the core, 
+	- a pretrained vision-encoder model that computes semantically rich image embeddings, 
+	- and a shallow mapping network that learned to project image embeddings into the text embedding space.
+- other LMM architectures (on processing image embeddings):
+	- Cross-Attention (Wang et al., 2023; Bai et al.,2023), 
+	- Q-Formers (Li et al., 2023; Geigle et al.,2023), 
+	- Adapters (Eichenberg et al., 2022), 
+	- or Preceiver Resamplers (Alayrac et al., 2022; Awadallaet al., 2023) to process image embeddings.
+- LLM evaluation benchmarks (mono and multi lingual):
+	- Popular benchmarks like BIG-Bench (bench authors, 2023), 
+	- HELM (Liang et al., 2022), 
+	- or MMLU (Hendrycks et al., 2020) are the defacto standard to evaluate LLMs on text-only tasks primarily in English. 
+	- Efforts like MEGA, 
+	- MEGAVERSE, 
+	- or MultiQ (Ahuja et al., 2023a,b; Holtermann et al., 2024) add a large set of diverse languages
+- LMM evaluation:
+	- MMMU (Yue et al., 2023), 
+	- MME (Fu et al., 2023),
+	- or MMBench (Yuan et al., 2023) assess the performance of LMMs on a vast number of text-image tasks.
+
+**problem**  
+We don't have benchmarks for LMMs (Large Multimodal Models) that are:
+- multimodal
+- multilingual
+
+**solution**  
+- M5 a comprehensive benchmark to evaluate LMMs on diverse vision-language tasks within a multilingual and multicultural context. M5 includes eight datasets
+covering five tasks and 41 languages, with a focus on underrepresented languages and culturally diverse images.
+- Two new datasets:
+	- M5-VGR
+	- M5-VLOD Visio-Linguistic Outlier Detection
+
+**results** 
+**conclusion / future** 
+**summary** 
+**thoughts** 
+**dataset**
+**models**
+
+**M5 paper not finished reading - it doesn't apply to me yet**
+
+## ValuesRAG: Enhancing Cultural Alignment Through Retrieval-Augmented Contextual Learning
+**year, subject, code**  
+2025, 
+
+**background**  
+- LLMs have cultural bias based on training data
+
+**problem**  
+- While some countries have developed localized LLMs, such as China’s ERNIE [Sun et al., 2021], ChatGLM [GLM et al., 2024], DeepSeek [Liu et al., 2024a], and South Korea’s HyperCLOVA [Yoo et al., 2024], these models also exhibit biases inherited from their respective training datasets.
+- Recent studies have proposed several approaches, such as role-assignment approaches [Tao et al., 2024] 
+- and few-shot learning techniques [Choenni and Shutova, 2024]
+- Role assignment is still relying on training data so not helpful.
+- Few-shot learning struggles to capture complex cultural values due to limited correlation btn different values dimensions.
+- Both RA and FSL work for single individual's values, which can't represent universal values of similar individuals.
+
+**solution**  
+-  a novel framework that utilizes Retrieval-Augmented Generation (RAG) and In-Context Learning (ICL) to dynamically incorporate cultural knowledge during text generation.
+- leveraging the World Values Survey (WVS) dataset [Haerpfer et al., 2022]
+- We randomly select 20% (52 questions) per topic for validation and use the remaining 80% (207 questions) for summary generation. 
+- The 31 demographic features, including country, sex, age, education, social class, and employment status, are used to generate demographic summaries for retrieval tasks.
+- they also do Retrieval-based Values Alignment which I don't understand.
+![alt text](image-14.png)
+
+**results**  
+- outperforms SOTA LLMs that rely on RA and FSL.
+- 21% benefit in performance.
+
+**conclusion / future**  
+- we plan to explore more adaptive retrieval strategies that can better align with novel datasets, 
+- as well as investigate how integrating additional fine-tuning with retrievalaugmented generation may further refine each agent’s contextual accuracy.
+
+**summary**  
+- using WVS as a ground truth data for cultural differences, ValuesRAG supplements LLM prompts with cultural summaries that help it respond with cultural awareness.
+
+**thoughts**  
+_their stuff:_
+- Methods like RLHF [Shen et al., 2023; Ji et al., 2024] are very commonly used in LLM values alignment, but this type of single values alignment method is not that suitable for the mitigation of cultural bias, because the alignment goal of cultural bias is diverse and dynamic [Huang et al., 2024]
+- Tao et al. [2024] adopted national and cultural role assignments to adjust the cultural values of LLMs, while Masoud et al. [2024] developed a soft prompt tuning approach to mitigate bias. Also, Choenni and Shutova [2024] employed few-shot in-context learning to align cultural behaviors, demonstrating promising results in specific contexts. However, these approaches face significant limitations in fully capturing the complexity of cultural alignment. 
+_my stuff:_
+- can we understand how they sliced VSM data? can we use it to do a benchmark study on LLMs understanding of culture (already done), and how far away from different cultures they are? (is it useful?)
+
+**dataset**
+- World Values Survey
+- plus 6 others that are culture/context specific [shown below]
+![alt text](image-13.png)
+
+**models**
+- SOTA models: Gemini Flash, GPT-4o
+
+## Do Language Models Enjoy Their Own Stories? Prompting Large Language Models for Automatic Story Evaluation
+**year, subject, code**  
+2024, TACL, https://github.com/dig-team/hanna-benchmark-asg
+
+**background**  
+- storytelling is complex.
+- automatic story evaluation (ASE and generation are complex.
+- LLMs are good at NLP tasks.
+- ASG "provides listeners with an engaging and instructive experience (Miller and Pennycuff, 2008)."
+- "LLMs are now able to produce convincing stories, so much so that they can be hard to distinguish from human stories (Clark et al., 2021)"
+
+on Prompt engineering:
+- Reynolds and McDonell (2021) notably find that zero-shot prompting can perform similarly to few-shot prompting, and even exceed it. 
+- They also explore the design of metaprompts that prime the language model to better solve a given problem.
+- Zhou et al. (2023b) treat the prompt engineering process as an optimization problem, use search algorithms guided by LLMs to solve it and attain human-level performance.
+- Wei et al. (2022a) and White et al. (2023) review different strategies that have been applied to augment large language model abilities, e.g., 
+	- least-to-most prompting (Zhou et al., 2023a), 
+	- ask-me-anything prompting (Arora et al., 2023), 
+	- and zero-shot chain-of-thought reasoning (Kojima et al., 2022).
+
+**problem**  
+- "human annotation of stories is costly and time-consuming (Celikyilmaz et al., 2020)"
+- current automatic measures have been shown to be poorly correlated with human judgment for ASG (Chhun et al., 2022)
+
+**solution**  
+contributions:
+- A comparison between LLMs and current ASE measures.
+- An analysis of the influence of prompt engineering on LLM performance.
+- Insights on LLM explainability for ASE.
+- An analysis of LLM performance in ASG. 
+
+methodology:
+
+This study uses zero- or one-shot Eval-Prompts.
+Given the importance of good prompt engineering (Zhao et al., 2021), they design four different Eval-Prompts for the generation of ratings. For each Eval-Prompt, they provide the model with a story-prompt and a corresponding story. Then:
+- Eval-Prompt 1 (simple rating): they ask the model to rate the story on a scale from 1 to 5 on one of the six criteria;
+- Eval-Prompt 2 (rating with explanation): same as Eval-Prompt 1, and they ask the model to explain its answer;
+- Eval-Prompt 3 (rating with explanation and guidelines): same as Eval-Prompt 2, and they provide the model with the detailed guidelines from the original annotation protocol by Chhun et al. (2022);
+- Eval-Prompt 4 (rating with explanation and human story): same as Eval-Prompt 2, and they provide the model with the human story associated with the same story-prompt. they explicitly tell the model that the human story is given only for reference purposes.
+- **important to note** they have statistical reasoning (beyond p-values) for averaging their results. very good to see. very good to review when I will need it.
+- they also did a user study to rate the LLM explanations.
+
+**results**  
+
+- consistency: LLMs have very high consistency overall, over all criteria 
+- correlation: Overall correlations remain weak, although LLMs display marginal improvements over non-LLM automatic measures, backed with strong statistical evidence. At the system-level, LLM correlations with human judgment are high, but statistical evidence is weaker.
+- LLM explanations: asking for explanations has negligaible effect on ratings.
+- giving LLM guidlines for eval lowers correlation, but providing a human story for ref increases correlations.
+- LLMs often struggle with following guidelines and substantiating their explanations.
+- LLMs good at short stories 500 to 1000 words.
+- LLMs are currently the best proxy for human story evaluation.
+- LLM stories have at least equal ASE ratings to human stories - they create stories that are just as good as those humans create.
+- Pretraining data == better ASG. the larger the LLM, the better the quality.
+
+**conclusion / future**  
+
+- Bubeck et al. (2023) argue that LLMs do display impressive performance at a wide variety of tasks but lack “slow thinking” capabilities, referring to the System 1–System 2 dichotomy introduced by Kahneman (2011).
+- they hypothesise that if the story follows good formal quality (vocabulary, syntax, grammar), it will be rated highly by the LLM and human because both associate good stories with being well-written. 
+
+**summary**  
+
+The writers used the HANNA dataset. They generated more stories from new LLMs, and then evaluated all stories using the 6 human criteria but using LLMs. They found that LLMs can evaluate similar to humans, but lack explanations.
+
+**thoughts**  
+
+- I misunderstood. I thought 500 - 1000 was long, but that's what they've used and are calling it short. so no need for long story eval (need is there, but out of my scope)
+- in the results section, what's the difference between correlations found and statistical evidence backing them? why is the stat evidence important?
+- can we get highly-ranked stories from HANNA and make them badly written? and see if the LLM and people will still consider them good?
+- can we explore System 1-System 2 thinking? apparently LLMs do System 1 so they just skim, they can't really understand or explain what a good story is.
+
+**dataset**
+
+- HANNA
+- for LLMs: CommonCrawl, Books1 and Books2
+
+**LLM models**
+
+old:
+
+- BERTGeneration (Rothe et al., 2020), 
+- CTRL (Keskar et al., 2019), 
+- GPT (Radford et al., 2019), 
+- GPT-2 (Radford et al., 2019), 
+- RoBERTa (Liu et al., 2019), 
+- and XLNet (Yang et al., 2019); 
+
+new:
+
+- Llama-2-7b-chat-hf (Llama-7B)
+- Platypus2-70B-instruct (Platypus2), 
+- Llama-30b-instruct-2048 (Llama-30B), 
+- StableBeluga-13B (Beluga-13B), 
+- and Mistral-7B-OpenOrca (Mistral)
+
+**ASG-specific models** 
+
+- Fusion (Fan et al., 2018), 
+- HINT (Guan et al., 2021), 
+- and TD-VAE (Wilmot and Keller, 2021).
+
+**evaluation models**
+
+- BLEU (Papineni et al., 2002), 
+- ROUGE (Lin, 2004), 
+- chrF (Popović, 2015), 
+- BERTScore (Zhang et al., 2020), 
+- SUPERT (Gao et al., 2020), 
+- BLANC (Vasilyev et al., 2020), 
+- BARTScore (Yuan et al., 2021), 
+- BaryScore (Colombo et al., 2021).
 
 ## 
-**year, subject, code**  
-**background**  
-**problem**  
-**solution**  
-**results**  
-**conclusion / future**  
-**summary**  
-**thoughts**  
+**year, subject, code**
+**background**
+**problem**
+**solution**
+**results**
+**conclusion / future**
+**summary**
+**thoughts**
 **dataset**
 **models**
 
