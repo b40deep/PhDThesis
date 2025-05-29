@@ -1,6 +1,6 @@
-PWD c:\Users\buenos\OneDrive - Swansea University\CDT-PhD\PhDThesis
+PWD d:\repos\PhDThesis
 INPUT C:\Users\buenos\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\buenos\OneDrive - Swansea University\CDT-PhD\PhDThesis\thesis.tex
+INPUT d:\repos\PhDThesis\thesis.tex
 OUTPUT thesis.log
 INPUT .\custard.cls
 INPUT custard.cls
