@@ -10,4 +10,6 @@
 - ➡️ IPAdapter issues:
     - the backgrounds are carried over. we want to make fresh backgrounds when we choose.
     - 2+ characters in image, both characters end up resembling if they're the same sex.
-- add the low-hanging fruit from Redmond...
+- ➡️ low-hanging fruit from Redmond...
+    - garbled text in images
+    - image emotion should match the paragraph emotion. perhaps on the last sentence.

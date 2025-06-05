@@ -12,4 +12,5 @@
 # Apr - May 2025
 - ✅ switched story prompt to match Gabi's new form structure
 - ➡️ checking to see if Hero's Journey can be incorportated into our story structure.
-- add the low-hanging fruit from Redmond...
+- ➡️ low-hanging fruit from Redmond...
+    - image emotion should match the paragraph emotion. perhaps on the last sentence.
