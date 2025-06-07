@@ -14,6 +14,7 @@
 - ➡️ checking to see if Hero's Journey can be incorportated into our story structure.
 - ➡️ low-hanging fruit from Redmond...
     - image emotion should match the paragraph emotion. perhaps on the last sentence.
+    - simplify the story english. it's still too educated-sounding.
 - ➡️ fix the participant dets on the PDF - fix formating, add pronoun. Add Yes/No so it's clearer to the LLM.
 - ➡️ use the actual participant details as toggles / sources for the generation
     - _culture_ influences their looks. can it influence some of the story decisions too?
