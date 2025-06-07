@@ -14,3 +14,16 @@
 - ➡️ checking to see if Hero's Journey can be incorportated into our story structure.
 - ➡️ low-hanging fruit from Redmond...
     - image emotion should match the paragraph emotion. perhaps on the last sentence.
+- ➡️ fix the participant dets on the PDF - fix formating, add pronoun. Add Yes/No so it's clearer to the LLM.
+- ➡️ use the actual participant details as toggles / sources for the generation
+    - _culture_ influences their looks. can it influence some of the story decisions too?
+    - we're not using _religion_ in any meaningful way. maybe at the identity change we can employ it esp Chrisitianity. check if this is also part of their _support network_.
+    - maybe use _hobbies and activities_ at the trouble stage (px fails to do or enjoy the hobby bse of health)
+    - maybe use _hobbies and activities_ at the lifestyle/identity stage (px incorporating changes into their hobby)
+    - use _healthcare access, freq, and resources_ to shape where the px goes to seek help from. Gabi was supposed to send the T2D/medical access heirarchy.
+    - use _tobacco and alcohol_ in a meaningful way. currently they're not shown.
+    - maybe _support network_ can make up the enemies and allies so that in the end, the bond is stronger..?
+
+- Jacki email about testing diff patient dets and their influence on the story.
+    - does image bg match _city/town_ and _location description_?
+    - does _safety rating_ match exercise decision esp walking/jogging?
