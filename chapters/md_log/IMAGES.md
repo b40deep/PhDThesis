@@ -13,3 +13,4 @@
 - ➡️ low-hanging fruit from Redmond...
     - garbled text in images
     - image emotion should match the paragraph emotion. perhaps on the last sentence.
+

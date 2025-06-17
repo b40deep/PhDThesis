@@ -5,3 +5,4 @@
 # Apr - May 2025
 - ➡️ compare semantic kernel and previous implementation to see which is better
 - ➡️ examine Doctors' process of determining treatment recommendations for T2D patients and model that in the RAG / pre-RAG questions/workflow. 
+

@@ -12,7 +12,11 @@
 # Apr - May 2025
 - ✅ switched story prompt to match Gabi's new form structure
 - 👉 switched from DefaultV2 content filter to my custom filter which ignores all jailbreak-detection triggers so I can use the models without being blocked for false-negative jailbreak triggers.
-- ➡️ checking to see if Hero's Journey can be incorportated into our story structure.
+- ✅ checking to see if Hero's Journey can be incorportated into our story structure.
+    - ✅ got it working to make a story outline.
+    - ✅ added it to our story pipeline march_batch.
+    - ➡️ tweaking to get good flow
+    - ➡️ breaking up ChASE's _Actions_ column into Action-Reason-Outcome-Reason for more fine-grained control over story gen.
 - ➡️ low-hanging fruit from Redmond...
     - image emotion should match the paragraph emotion. perhaps on the last sentence.
     - simplify the story english. it's still too educated-sounding.
@@ -29,3 +33,4 @@
 - Jacki email about testing diff patient dets and their influence on the story.
     - does image bg match _city/town_ and _location description_?
     - does _safety rating_ match exercise decision esp walking/jogging?
+
