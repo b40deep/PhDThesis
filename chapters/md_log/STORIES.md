@@ -9,7 +9,7 @@
  - as the Px practices these, he or she sees the benefit. this builds the internal motivation
  - then the _reason behind the HP's external instruction_ becomes the internal instruction
 
-# Apr - May 2025
+# Apr - June 2025
 - ✅ switched story prompt to match Gabi's new form structure
 - 👉 switched from DefaultV2 content filter to my custom filter which ignores all jailbreak-detection triggers so I can use the models without being blocked for false-negative jailbreak triggers.
 - ✅ checking to see if Hero's Journey can be incorportated into our story structure.
@@ -31,6 +31,9 @@
     - maybe _support network_ can make up the enemies and allies so that in the end, the bond is stronger..?
 
 - Jacki email about testing diff patient dets and their influence on the story.
-    - does image bg match _city/town_ and _location description_?
-    - does _safety rating_ match exercise decision esp walking/jogging?
+    - ✅ does image bg match _city/town_ and _location description_?
+        - not aligned. suggests similar environments to urban schools for user Test001 who lives in a rural area. [PDF is on fifty90]
+    - ✅ does _safety rating_ match exercise decision esp walking/jogging?
+        - not aligned. still suggests walks for user Test001 even when input says there are safety concerns affecting outdoor activity. [PDF is on alienware]
+    - ➡️ need to go through the form and align story generation to specific inputs from it (similar to previous point above).
 
