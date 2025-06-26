@@ -13,4 +13,8 @@
 - ➡️ low-hanging fruit from Redmond...
     - garbled text in images
     - image emotion should match the paragraph emotion. perhaps on the last sentence.
+
+# Jun 2025
+- 💡 have people act as T2I models: gen the story, then give people to visualise it using simple digital collaging / mosaicing / cutout style. they select a patient, the clothing, the location/bg, the HP, etc. then we compare with what the T2I generated.
+
 - ➡️ hyperlora https://www.youtube.com/watch?v=f2r4_eQFpRE
