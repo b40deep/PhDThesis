@@ -16,11 +16,13 @@
     - ✅ got it working to make a story outline.
     - ✅ added it to our story pipeline march_batch.
     - ➡️ tweaking to get good flow
+    - ✅ created a ChASE table and it works. (on paper)
     - ➡️ breaking up ChASE's _Actions_ column into Action-Reason-Outcome-Reason for more fine-grained control over story gen.
 - ➡️ low-hanging fruit from Redmond...
     - image emotion should match the paragraph emotion. perhaps on the last sentence.
     - simplify the story english. it's still too educated-sounding.
-- ➡️ fix the participant dets on the PDF - fix formating, add pronoun. Add Yes/No so it's clearer to the LLM.
+- ✅ fix the participant dets on the PDF - fix formating, add pronoun. 
+- ➡️ Add Yes/No so it's clearer to the LLM.
 - ➡️ use the actual participant details as toggles / sources for the generation
     - _culture_ influences their looks. can it influence some of the story decisions too?
     - we're not using _religion_ in any meaningful way. maybe at the identity change we can employ it esp Chrisitianity. check if this is also part of their _support network_.
